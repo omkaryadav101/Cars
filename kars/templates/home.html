@@ -1,0 +1,10 @@
+<h1>Car Listings</h1>
+<ul>
+  {% for car in cars %}
+    <li>
+      <h2><a href="{% url 'car_detail' car.id %}">{{ car.make }} {{ car.model }}</a></h2>
+      <p>Year: {{ car.year }}</p>
+      <p>Price: ${{ car.price }}</p>
+    </li>
+  {% endfor %}
+</ul>
